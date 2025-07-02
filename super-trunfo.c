@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <windows.h>
 
+#define BILHAO 1000000000.0
+#define KM 1000.0             
+#define KM_QUADRADO 1000000.0  
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
 
@@ -58,8 +62,8 @@ int main() {
 
     // CÁLCULOS
 
-    densidade1 = populacao1 / area1;
-    densidade2 = populacao2 / area2;
+    densidade1 = populacao1 / (area1 * KM_QUADRADO); ;
+    densidade2 = populacao2 / (area2 * KM_QUADRADO);
 
     // ESCOLHA DO PRIMEIRO ATRIBUTO
     printf("\n=== ESCOLHA O PRIMEIRO ATRIBUTO ===\n");
@@ -103,16 +107,16 @@ int main() {
             printf("1º Atributo - Área:\n");
             printf("%s: %.2f km²\n", pais1, area1);
             printf("%s: %.2f km²\n", pais2, area2);
-            valor1_attr1 = area1;
-            valor2_attr1 = area2;
+            valor1_attr1 = area1 * KM_QUADRADO;
+            valor2_attr1 = area2 * KM_QUADRADO;
             vencedor_attr1 = (area1 > area2) ? 1 : (area2 > area1) ? 2 : 0;
             break;
         case 3:
             printf("1º Atributo - PIB:\n");
             printf("%s: %.2f bilhões\n", pais1, pib1);
             printf("%s: %.2f bilhões\n", pais2, pib2);
-            valor1_attr1 = pib1;
-            valor2_attr1 = pib2;
+            valor1_attr1 = pib1 * BILHAO; 
+            valor2_attr1 = pib2 * BILHAO;
             vencedor_attr1 = (pib1 > pib2) ? 1 : (pib2 > pib1) ? 2 : 0;
             break;
         case 4:
@@ -150,16 +154,16 @@ int main() {
             printf("\n2º Atributo - Área:\n");
             printf("%s: %.2f km²\n", pais1, area1);
             printf("%s: %.2f km²\n", pais2, area2);
-            valor1_attr2 = area1;
-            valor2_attr2 = area2;
+            valor1_attr2 = area1 * KM_QUADRADO;
+            valor2_attr2 = area2 * KM_QUADRADO;
             vencedor_attr2 = (area1 > area2) ? 1 : (area2 > area1) ? 2 : 0;
             break;
         case 3:
             printf("\n2º Atributo - PIB:\n");
             printf("%s: %.2f bilhões\n", pais1, pib1);
             printf("%s: %.2f bilhões\n", pais2, pib2);
-            valor1_attr2 = pib1;
-            valor2_attr2 = pib2;
+            valor1_attr2 = pib1 * BILHAO; 
+            valor2_attr2 = pib2 * BILHAO;
             vencedor_attr2 = (pib1 > pib2) ? 1 : (pib2 > pib1) ? 2 : 0;
             break;
         case 4:
@@ -200,6 +204,5 @@ int main() {
         printf("\nEMPATE!\n");
     }
 
- 
     return 0;
 }
