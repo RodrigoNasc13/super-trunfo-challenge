@@ -1,63 +1,96 @@
-# 🃏 Super Trunfo das Cidades
+# 🏆 Sistema de Comparação de Países - Super Trunfo
 
-Bem-vindo ao **Super Trunfo das Cidades**!  
-Este é um joguinho simples em C onde você compara cartas de cidades brasileiras com base em vários atributos, como população, área, PIB e até um misterioso "Super Poder"! 🚀
+## 📋 Descrição do Projeto
 
-## O que esse programa faz?
+Este projeto implementa um sistema de comparação entre países baseado no jogo Super Trunfo, desenvolvido em linguagem C. O programa permite que o usuário compare dois países através de diferentes atributos socioeconômicos e determine um vencedor com base na soma dos valores dos atributos selecionados.
 
-Você vai digitar os dados de **duas cidades** (cada uma é uma carta) e o programa vai comparar os atributos delas, dizendo qual carta vence em cada categoria.  
-No final, ele mostra quem ganhou em cada atributo e ainda exibe o resultado da comparação.
+## 🎯 Objetivos
 
-## Como funciona?
+- **Objetivo Principal**: Desenvolver um programa interativo que compare atributos de países
+- **Objetivos Específicos**:
+  - Implementar entrada de dados estruturada
+  - Realizar cálculos automáticos de densidade demográfica
+  - Criar sistema de comparação dinâmica entre atributos
+  - Determinar vencedor através de soma ponderada
 
-1. **Digite os dados da Carta 1:**  
-   - Estado (letra de A a H)
-   - Código da carta (ex: A01)
-   - Nome da cidade
-   - População
-   - Área (em km²)
-   - PIB (em bilhões de reais)
-   - Número de pontos turísticos
+## ⚙️ Funcionalidades
 
-2. **Digite os dados da Carta 2:**  
-   (Mesmos campos acima)
+### 📊 Atributos Comparáveis
+1. **População** - Número de habitantes
+2. **Área** - Extensão territorial em km²
+3. **PIB** - Produto Interno Bruto em bilhões de reais
+4. **Pontos Turísticos** - Quantidade de pontos turísticos
+5. **Densidade Demográfica** - Calculada automaticamente (hab/km²)
 
-3. O programa calcula:
-   - Densidade populacional
-   - PIB per capita
-   - Super Poder (uma soma dos atributos, só para deixar divertido 😄)
+### 🔧 Recursos Técnicos
+- Interface de console com codificação UTF-8
+- Menu dinâmico para seleção de atributos
+- Validação de entrada para evitar duplicação de escolhas
+- Cálculos automáticos de densidade populacional
+- Sistema de comparação com determinação de vencedor
 
-4. Ele mostra os dados das duas cartas e faz a comparação de cada atributo, dizendo quem venceu e mostrando (1) se a Carta 1 ganhou ou (0) se foi a Carta 2.
+## 🚀 Como Executar
 
-## Exemplo de saída
+### Pré-requisitos
+- Compilador GCC instalado
+- Sistema operacional Windows (devido ao uso de `windows.h`)
+
+### Compilação
+```bash
+gcc super-trunfo.c -o super-trunfo.exe
+```
+
+### Execução
+```bash
+./super-trunfo.exe
+```
+
+## 💻 Fluxo de Execução
+
+1. **Entrada de Dados**: O usuário insere informações de dois países
+2. **Seleção de Atributos**: Escolha de dois atributos diferentes para comparação
+3. **Processamento**: Cálculo automático da densidade demográfica
+4. **Comparação**: Análise individual de cada atributo selecionado
+5. **Resultado**: Determinação do vencedor pela soma dos valores
+
+
+## 🏗️ Estrutura do Código
 
 ```
-População: Carta 1 venceu (1)
-Área: Carta 2 venceu (0)
-PIB: Carta 1 venceu (1)
-Pontos Turísticos: Carta 2 venceu (0)
-Densidade Populacional: Carta 1 venceu (1)
-PIB per Capita: Carta 2 venceu (0)
-Super Poder: Carta 1 venceu (1)
+super-trunfo.c
+├── Declaração de Variáveis
+├── Entrada de Dados (2 países)
+├── Cálculos Automáticos
+├── Sistema de Menus
+├── Comparação de Atributos
+└── Determinação do Resultado
 ```
 
-## Como rodar
+## 🛠️ Tecnologias Utilizadas
 
-1. Compile o código:
-   ```
-   gcc super-trunfo.c -o super-trunfo
-   ```
-2. Execute:
-   ```
-   ./super-trunfo
-   ```
-   (No Windows, use `super-trunfo.exe`)
+- **Linguagem**: C
+- **Bibliotecas**: 
+  - `stdio.h` - Entrada/saída padrão
+  - `windows.h` - Configuração de console
+- **Compilador**: GCC
 
-## Observações
+## 📚 Conceitos Aplicados
 
-- O programa usa `SetConsoleOutputCP(CP_UTF8);` para garantir que acentos e caracteres especiais apareçam certinho no Windows.
-- Não esqueça de digitar os dados certinhos para não dar erro.
+- Estruturas de controle (if/else, switch/case, while)
+- Manipulação de strings
+- Operações matemáticas
+- Entrada e saída formatada
+- Validação de dados
+- Operadores ternários
+
+## 👥 Autor
+
+Trabalho acadêmico desenvolvido para a disciplina de Programação em C.
+
+## 📄 Licença
+
+Este projeto é desenvolvido para fins educacionais.
 
 ---
 
-Divirta-se comparando cidades e vendo quem tem o maior "Super Poder"! 😁  
+*Projeto desenvolvido como parte dos estudos em Ciência da Computação*
